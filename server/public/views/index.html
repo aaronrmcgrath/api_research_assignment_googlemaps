@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>API Research: Google Maps</title>
+
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+
+    <!-- STYLES -->
+    <!-- <link rel="stylesheet" href="/assets/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css" /> -->
+
+    <!-- SCRIPTS -->
+    <!-- <script type="text/javascript" src="/assets/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/vendors/angular-route.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/client.js"></script> -->
+
+  </head>
+  <body>
+    <h1>API RESEARCH: GOOGLE MAPS</h1>
+
+    <!-- <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#map">MAP</a></li>
+    </ul> -->
+
+    <!-- <main ng-view></main> -->
+
+    <div id="map"></div>
+    <script>
+          var map;
+
+          function initMap() {
+              map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 44.3611312, lng: -92.8499861}, //44.3611312,-92.8499861,10.02z
+                zoom: 10
+              });
+          }
+    </script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=" + api key + "&callback=initMap"></script>
+
+
+  </body>
+</html>
